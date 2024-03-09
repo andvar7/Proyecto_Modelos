@@ -16,6 +16,7 @@ RUN pip install --upgrade setuptools
 RUN pip install pandas==1.5.3
 RUN pip install seaborn==0.12.2
 RUN pip install matplotlib==3.7.1
+RUN pip install numpy==1.21.4
 RUN pip cache purge
 RUN pip install git+https://github.com/andvar7/Proyecto_Modelos.git
 
