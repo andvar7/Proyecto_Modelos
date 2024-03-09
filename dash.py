@@ -41,4 +41,8 @@ def update_output(n_clicks, recency, frequency, monetary, segmentonombre):
         return f"El Cluster predicho es: {prediction}"
     else:
         return "Ingrese los datos y haga clic en 'Predict'"
+
+# Ejecutar la aplicación
+if __name__ == '__main__':
+    main()
 tiene menú contextual
