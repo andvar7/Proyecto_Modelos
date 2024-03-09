@@ -5,7 +5,7 @@ FROM python:3.9.17-slim
 WORKDIR /app
 
 # Copia los archivos necesarios al contenedor
-COPY requirements.txt app/requirements.txt
+COPY requirements.txt
 COPY dash.py
 COPY modelo.pkl
 
