@@ -7,7 +7,7 @@ WORKDIR /app
 # Copia los archivos necesarios al contenedor
 COPY requirements.txt .
 COPY dash.py .
-COPY ModeloClasificacion.joblib .
+COPY modelo.pkl .
 
 # Instala las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
