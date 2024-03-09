@@ -1,3 +1,17 @@
+import numpy as np
+from flask import Flask, request, jsonify, render_template, url_for
+import pickle
+from sklearn import svm
+import streamlit as st
+!pip install dash
+import dash
+from dash import dcc, html
+!pip install dash-bootstrap-components
+import dash_bootstrap_components as dbc
+from dash.dependencies import Input, Output, State
+import joblib
+import pandas as pd
+
 # Cargar el modelo previamente entrenado
 model = joblib.load('modelo.pkl')
  
