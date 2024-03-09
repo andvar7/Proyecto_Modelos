@@ -16,6 +16,9 @@ from dash.dependencies import Input, Output, State
 import joblib
 import pandas as pd
 
+# Path del modelo preentrenado
+MODEL_PATH = 'ModeloClasificacion.joblib'
+
 # Cargar el modelo previamente entrenado
 # model = joblib.load('C:/Users/Andres/Downloads/pickle_model.pkl')
 model = joblib.load('ModeloClasificacion.joblib')
