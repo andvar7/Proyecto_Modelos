@@ -17,11 +17,11 @@ import joblib
 import pandas as pd
 
 # Path del modelo preentrenado
-MODEL_PATH = 'Modelo.pkl'
+MODEL_PATH = 'modelo.pkl'
 
 # Cargar el modelo previamente entrenado
 # model = joblib.load('C:/Users/Andres/Downloads/pickle_model.pkl')
-model = joblib.load('Modelo.pkl')
+model = joblib.load('modelo.pkl')
 
 # Crear la aplicación Dash
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
