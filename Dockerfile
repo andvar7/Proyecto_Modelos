@@ -1,22 +1,19 @@
-nano Dockerfile
+# Utiliza una imagen base de Python
+FROM python:3.9.17-slim
 
-# Indica la imagen base que quieres usar
-FROM ubuntu:latest
-
-# Actualiza los paquetes del sistema
-RUN apt-get update && apt-get install -y \
-    software-properties-common \
-    python3 \
-    python3-pip
-
-# Copia los archivos de tu aplicación al contenedor
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
-COPY . /app
 
-# Instala las dependencias de tu aplicación
-RUN pip3 install -r requirements.txt
+# Copia los archivos necesarios al contenedor
+COPY requirements.txt .
+COPY app.py .
+COPY modelo.pkl .
 
-# Define el comando por defecto para ejecutar tu aplicación
-CMD ["python3", "app.py"]
+# Instala las dependencias
+RUN pip install --no-cache-dir -r requirements.txt
 
-docker build -t nombre_de_la_imagen .
+# Expone el puerto que utilizará tu aplicación
+EXPOSE 5000
+
+# Comando para ejecutar la aplicación
+CMD ["python", "app.py"]
