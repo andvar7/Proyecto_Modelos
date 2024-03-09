@@ -5,9 +5,9 @@ FROM python:3.9.17-slim
 WORKDIR /app
 
 # Copia los archivos necesarios al contenedor
-COPY requirements.txt .
-COPY dash.py .
-COPY modelo.pkl .
+COPY requirements.txt app/requirements.txt
+COPY dash.py
+COPY modelo.pkl
 
 # Instala las dependencias
 RUN pip install --no-cache-dir -r requirements.txt
